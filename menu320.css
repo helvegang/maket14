@@ -1,0 +1,209 @@
+@font-face {
+	font-family: 'ttlakes';
+	font-display: swap;
+	src: url("/fonts/TTLakes-Regular.eot");
+	src: local("O"), url("/fonts/TTLakes-Regular.woff") format("woff"), 
+			url("/fonts/TTLakes-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'ttlakesextrabold';
+	font-display: swap;
+	src: url("/fonts/TTLakes-ExtraBold.eot");
+	src: local("O"), url("/fonts/TTLakes-ExtraBold.woff") format("woff"), 
+			url("/fonts/TTLakes-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'ttlakesbold';
+	font-display: swap;
+	src: url("/fonts/TTLakes-Regular.eot");
+	src: local("O"), url("/fonts/TTLakes-Bold.woff") format("woff"), 
+			url("/fonts/TTLakes-Bold.ttf") format("truetype");
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.background {
+    opacity: 0.5;
+    background-color: white;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 320px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 60px grey;
+}
+.header {
+    display: flex;
+    background-color: #FFFFFF;
+    align-items: center;
+    margin: 0px;
+    padding: 0px 24px;
+}
+.menu__header {
+    margin-bottom: 29px;
+}
+.header__logo {
+height: 51px;
+width: 97px;
+margin-right: auto;
+}
+
+.button {
+    background-color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border: 0px;
+}
+.button__img:hover {
+    opacity: 0.3;
+}
+.header__button {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.header__button:first-child {
+    margin-right: 16px;
+}
+
+.button__img {
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+ }
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 24px;
+    padding-right: 16px; 
+    padding-bottom: 16px; 
+    
+}
+.item {  /* Это общее правило для всех item, которое можно переиспользовать */
+    position: relative;
+    color:#1B1C21;
+    background-color: #FFFFFF;
+    border: 0px;
+    font-family: 'ttlakes';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+
+}
+.navigation__item { /* Это правило для item которые действуют только как для элемента item блока navigation */
+    padding: 4px 0px;
+    margin-bottom: 16px;
+}
+
+.item:hover {
+    color: #FF3E79;
+}
+
+.item:focus {
+    color: #7E7E82;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.item:focus::after {
+    content: "";
+    border-radius: 0 4px 4px 0;
+    background-color: #41F6D7;
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    left: -24px;
+    top: 0px;
+}
+.item:hover::after {
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    content: "";
+    border-radius: 0 4px 4px 0;
+    background-color: #FF3E79;
+    opacity: 0.3;
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    left: -24px;
+    top: 0px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+.menu__footer {
+    margin-top: auto;
+    padding: 0 24px 32px 24px;
+}
+.footer__button {
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer__item, .language__item {
+    background-color: #FFFFFF;
+    border: 0px;
+}
+.footer__item--mail {
+    font-family: "ttlakes";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+.footer__item--mail:hover {
+    color: #FF3E79;
+}
+.footer__item--tel {
+    font-family: "ttlakesextrabold";
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 40px;
+}
+.footer__item--tel:hover {
+    color: #FF3E79;
+}
+.language {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.language__item {
+    font-family: "ttlakes";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 0px;
+    margin-right: 7px;
+}
+.language__item:hover {
+    color: #FF3E79;
+}
+.language__item:focus {
+    color: #7E7E82;
+}
